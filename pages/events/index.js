@@ -1,3 +1,5 @@
-export default function index(){
+
+
+export default function index() {
     return <h1>Event</h1>
 }

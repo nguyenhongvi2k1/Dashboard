@@ -1,6 +1,6 @@
 import EventItem from "./event-item";
 
-function SideBar(props) {
+function EventList(props) {
     const {items} = props;
     return (
             <ul>
@@ -17,4 +17,4 @@ function SideBar(props) {
     )
 }
 
-export default SideBar;
+export default EventList;

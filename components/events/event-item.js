@@ -3,15 +3,14 @@ import Button from '../ui/button'
 
 function EventItem(props){
     const {id, title, description} = props;
-    const exploreLink = `/${title}/${id}`;
+    const exploreLink = `/users`;
     return(
         <>
             <div>
                 <li className={styles.actions}>
-                        <Button link={exploreLink}>
-                            <span>{title}</span>
-                        </Button>
-
+                    <Button link={exploreLink}>
+                        <span>{title}</span>
+                    </Button>
                 </li>
             </div>
         </>
