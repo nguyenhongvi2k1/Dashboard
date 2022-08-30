@@ -1,8 +1,18 @@
-import '../styles/globals.css'
+import Layout from "../components/layout/layout";
+import "../styles/globals.css";
+import Head from "next/head";
+import {Sidebar} from "../components/layout/sidebar";
 
-export default function MyApp({ Component, pageProps }) {
-    // Use the layout defined at the page level, if available
-    const getLayout = Component.getLayout || ((page) => page)
+function MyApp({ Component, pageProps }) {
+    return (
+        <Layout>
+            <Head>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
 
-    return getLayout(<Component {...pageProps} />)
+            </Head>
+            <Component {...pageProps} />
+        </Layout>
+    );
 }
+
+export default MyApp;
