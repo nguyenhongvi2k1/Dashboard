@@ -4,7 +4,7 @@ import RestaurantsList from "../../components/restaurants/restaurants-list";
 import {fetchAPI} from "../../lib/api";
 
 function Index(props) {
-    console.log(props)
+    // console.log(props)
     return (
         <Fragment>
             <Head>

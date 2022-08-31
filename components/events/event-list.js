@@ -2,7 +2,7 @@ import EventItem from "./event-item";
 
 function EventList(props) {
     const {items} = props;
-    console.log(items)
+    // console.log(items)
     return (
             <ul>
             {items.map((event) => (
@@ -12,6 +12,7 @@ function EventList(props) {
                     title={event.attributes.title}
                     content={event.attributes.content}
                     date={event.attributes.date}
+                    image = {event.attributes.image}
                 />
                 )
             )}

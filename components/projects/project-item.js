@@ -1,7 +1,9 @@
+import NextImage from "../image/image";
+import {getStrapiMedia} from "../../lib/media";
 
 
 function ProjectsItem(props){
-    const {id, title, content, date} = props;
+    const {id, title, content, date, image} = props;
 
     return(
         <>
@@ -30,7 +32,7 @@ function ProjectsItem(props){
                         </div>
                     </div>
                 </div>
-
+                <NextImage image={image.data[0].attributes}/>
             </div>
         </>
     )

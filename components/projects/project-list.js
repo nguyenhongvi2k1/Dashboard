@@ -2,7 +2,7 @@ import ProjectsItem from "./project-item";
 
 function ProjectList(props) {
     const {items} = props;
-    console.log(items)
+
     return (
         <ul>
             {items.map((project) => (
@@ -12,6 +12,8 @@ function ProjectList(props) {
                         title={project.attributes.title}
                         content={project.attributes.content}
                         date = {project.attributes.date}
+                        image = {project.attributes.image}
+
                     />
                 )
             )}

@@ -2,7 +2,7 @@ import RestaurantsItem from "./restaurants-item";
 
 function RestaurantsList(props) {
     const {items} = props;
-    console.log(items)
+    // console.log("restaurants list: ",items)
     return (
         <ul>
             {items.map((restaurant) => (
@@ -13,6 +13,7 @@ function RestaurantsList(props) {
                         description={restaurant.attributes.description}
                         location = {restaurant.attributes.location}
                         date ={restaurant.attributes.date}
+                        image = {restaurant.attributes.image}
                     />
                 )
             )}

@@ -1,10 +1,11 @@
 import styles from './event-item.module.css'
-import Button from '../ui/button'
 import {Fragment} from "react";
+import NextImage from "../../components/image/image";
+import {getStrapiMedia} from "../../lib/media";
 
 function EventItem(props){
-    console.log(props)
-    const {id, title, content, date} = props;
+    // console.log(props)
+    const {id, title, content, date, image} = props;
     return(
     <Fragment>
         <div
@@ -31,6 +32,9 @@ function EventItem(props){
                         </div>
                     </div>
                 </div>
+            </div>
+            <div>
+                <NextImage image={image.data[0].attributes}/>
             </div>
 
         </div>

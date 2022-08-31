@@ -1,7 +1,13 @@
 import {Fragment} from "react";
+import styles from './restaurants-item.module.css'
+import NextImage from "../image/image";
+import Image from "next/image";
+import {getStrapiMedia} from "../../lib/media";
 
 export default function RestaurantsList(props){
-    const {id, title, date, description, location} = props;
+    // console.log("restaurants items: ",props)
+    const {id, title, date, description, location, image} = props;
+    // console.log("iamge: ",image.data[0].attributes)
     return(
         <Fragment>
             <div
@@ -10,7 +16,7 @@ export default function RestaurantsList(props){
             >
                 <h1>{title}</h1>
 
-                <div className="uk-section">
+                <div className={styles.uk_section}>
                     <div className="uk-container uk-container-small">
                         <hr className="uk-divider-small" />
                         <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
@@ -34,6 +40,9 @@ export default function RestaurantsList(props){
                             </div>
                         </div>
                     </div>
+                </div>
+                <div>
+                    <NextImage image={image.data[0].attributes}/>
                 </div>
             </div>
         </Fragment>

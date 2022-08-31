@@ -33,6 +33,9 @@ export const Sidebar = ({}) => {
                         <li>
                             <Link href='/restaurant'>Restaurants</Link>
                         </li>
+                        <li>
+                            <Link href='/form'>Form</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
